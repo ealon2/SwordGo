@@ -17,7 +17,7 @@ public class Personaje extends PersistenceEntity{
   TipoDePersonaje tipoDePersonaje;
 
   @ManyToMany
-  @OrderColumn(name="ubicacion_visitada")
+  @JoinTable(name = "Ubicaciones_Visitadas")
   List<Ubicacion> ubicaciones;
 
   @OneToMany
